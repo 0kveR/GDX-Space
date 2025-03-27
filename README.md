@@ -10,14 +10,21 @@ I have some previous experience with OpenGL, but I was not able to continue that
 university work. Since it's been a few months I decided that it would be better to start on a fresh slate.
 This would also give me an opportunity to re-familiarize myself with Kotlin and the Java environment.
 ## Progress and Goals
+Phase 1: Setup and Experimentation
 - [x] Set up the project files
 - [x] Write README and plan out project
+- [ ] Render a box on the screen
+- [ ] Render more shapes like Spheres, Cones, etc.
+- [ ] Apply simple textures/Shaders
+
+Phase 2: A Simple Scene
 - [ ] Create basic 3D Environment
 - [ ] Add controls for player
-- [ ] Add colors and textures
+- [ ] Add final colors and textures
 - [ ] Add interactable objects
 
-These are my only real goals so far. I may add more if I complete these.
+My goal is to make something with a 'wireframe' look to it. There should be lines indicating vertices but the space
+between enclosed by them is completely transparent.
 
 ---
 <details>
