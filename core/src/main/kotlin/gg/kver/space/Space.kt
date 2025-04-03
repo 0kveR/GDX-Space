@@ -46,7 +46,7 @@ class Space : ApplicationListener {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT or GL20.GL_DEPTH_BUFFER_BIT) // Clears color buffer and depth buffer
         Gdx.gl.glClearColor(0f, 0f, 0f, 1f) // Bets color of the clear, each value is between 0 and 1 (v4 is alpha)
 
-        batch.begin(camera) // batches must have a begin statement before their render statements
+        batch.begin(camera) // batches must have a .begin() statement before their render statements
         batch.render(boxInstance)
         batch.end() // when all instances are rendered, use .end()
     }
