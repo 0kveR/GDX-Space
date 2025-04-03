@@ -13,7 +13,7 @@ This would also give me an opportunity to re-familiarize myself with Kotlin and 
 Phase 1: Setup and Experimentation
 - [x] Set up the project files
 - [x] Write README and plan out project
-- [ ] Render a box on the screen
+- [x] Render a box on the screen
 - [ ] Render more shapes like Spheres, Cones, etc.
 - [ ] Apply simple textures/Shaders
 
