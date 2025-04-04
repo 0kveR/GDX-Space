@@ -17,7 +17,11 @@ class Space : ApplicationListener {
     private lateinit var camera: Camera
     private lateinit var batch: ModelBatch
     private lateinit var boxModel: Model
+    private lateinit var sphModel: Model
+    private lateinit var conModel: Model
     private lateinit var boxInstance: ModelInstance
+    private lateinit var sphInstance: ModelInstance
+    private lateinit var conInstance: ModelInstance
 
     override fun create() {
         // Prepare your application here.
@@ -34,6 +38,18 @@ class Space : ApplicationListener {
             (Usage.Position or Usage.Normal).toLong()
         )
         boxInstance = ModelInstance(boxModel)
+        sphModel = modelBuilder.createSphere(4f, 4f, 4f, 15, 15,
+            Material(ColorAttribute.createDiffuse(Color.GOLD)),
+            (Usage.Position or Usage.Normal).toLong())
+        sphInstance = ModelInstance(sphModel)
+        sphInstance.transform.translate(7.5f, 3.7f, 0f)
+        sphInstance.calculateTransforms()
+        conModel = modelBuilder.createCone(3f, 5f, 3f, 12,
+            Material(ColorAttribute.createDiffuse(Color.ROYAL)),
+            (Usage.Position or Usage.Position).toLong())
+        conInstance = ModelInstance(conModel)
+        conInstance.transform.translate(-12.5f, -3.7f, 4f)
+        conInstance.calculateTransforms()
     }
 
     override fun resize(width: Int, height: Int) {
@@ -48,6 +64,8 @@ class Space : ApplicationListener {
 
         batch.begin(camera) // batches must have a .begin() statement before their render statements
         batch.render(boxInstance)
+        batch.render(sphInstance)
+        batch.render(conInstance)
         batch.end() // when all instances are rendered, use .end()
     }
 
@@ -63,5 +81,7 @@ class Space : ApplicationListener {
         // Destroy application's resources here.
         batch.dispose()
         boxModel.dispose()
+        sphModel.dispose()
+        conModel.dispose()
     }
 }
