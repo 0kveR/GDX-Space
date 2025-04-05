@@ -15,16 +15,22 @@ Phase 1: Setup and Experimentation
 - [x] Write README and plan out project
 - [x] Render a box on the screen
 - [x] Render more shapes like Spheres, Cones, etc.
-- [ ] Apply simple textures/Shaders
+- [ ] Apply simple lighting
 
-Phase 2: A Simple Scene
-- [ ] Create basic 3D Environment
+Phase 2: The Blender Sidequest
+- [ ] Create low-poly objects like boxes, cones, and spheres
+- [ ] Replace the ModelBuilder versions with .gltf files
+- [ ] Create a more advanced shape to practice modeling and render it
+- [ ] Create a recognizable object for the scene (object TBD)
+
+Phase 3: Back to Kotlin
+- [ ] Create basic 3D Scene with Blender and render it
 - [ ] Add controls for player
-- [ ] Add final colors and textures
+- [ ] Add final shaders
 - [ ] Add interactable objects
 
-My goal is to make something with a 'wireframe' look to it. There should be lines indicating vertices but the space
-between enclosed by them is completely transparent.
+My current goal is to make something with a 'wireframe' look to it. There should be lines indicating vertices but the space
+between enclosed by them is completely transparent. This may change in the future.
 
 ---
 <details>
